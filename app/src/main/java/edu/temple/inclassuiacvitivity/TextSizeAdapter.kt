@@ -18,7 +18,7 @@ class TextSizeAdapter (private val context: Context, private val items: Array<In
     override fun getItemId(position: Int) = position.toLong()
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?) = if (convertView == null) {
-            TextView(convertView)
+            TextView(context)
         }else{
             convertView as TextView
         }.apply {
